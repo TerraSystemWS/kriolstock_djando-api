@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io
 
+# remover o virtual ambiente
+k_venv
 ### OSX ###
 .DS_Store
 .AppleDouble
