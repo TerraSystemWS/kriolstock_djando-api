@@ -48,7 +48,7 @@ Cria um arquivo de migração vazio, útil quando você precisa personalizar as 
 
 -Criar Arquivos Estáticos:
 
-```python manage.py collectstatic
+```python manage.py collectstatic```
 Coleta arquivos estáticos de todas as aplicações em um único diretório para servir durante a produção.
 
 
