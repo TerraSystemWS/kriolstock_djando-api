@@ -1,7 +1,11 @@
 # Created by https://www.gitignore.io
 
+# credentials
+.my_pgpass
+
 # remover o virtual ambiente
 k_venv
+help
 ### OSX ###
 .DS_Store
 .AppleDouble
