@@ -6,3 +6,4 @@ psycopg2
 markdown
 django-filter
 python-dotenv
+djangorestframework-simplejwt
