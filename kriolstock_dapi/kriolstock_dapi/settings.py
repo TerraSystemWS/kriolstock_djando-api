@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'coreapi',
     'corsheaders',
     'rest_framework_simplejwt',
-    'users'
+    'users',
+    'assets'
 ]
 
 REST_FRAMEWORK = {

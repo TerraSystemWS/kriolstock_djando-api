@@ -4,7 +4,7 @@ from rest_framework.exceptions import AuthenticationFailed
 from .serializers import UserSerializer
 from .models import User
 import jwt, datetime
-from jwt import algorithms
+#from jwt import algorithms
 
 algorithms_available = ['HS256']  # Adicione outros algoritmos, se necessário
 
