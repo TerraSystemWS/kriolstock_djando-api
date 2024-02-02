@@ -15,11 +15,18 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# from dotenv import load_dotenv
+# import os
+
+# load_dotenv('.env')
+# carregar as variaveis de ambientes
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = 'django-insecure-aunasv*!-sfs2a+k7qn1ao-#zl1_%3ku7*2v$#i72m@wsu_9&2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -82,27 +89,32 @@ WSGI_APPLICATION = 'kriolstock_dapi.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "OPTIONS": {
-            #"service": "psql_kriol",
-            "passfile": ".my_pgpass",
-        },
-    }
-}
+# print("env")
+# print(os.environ.get('NAME'))
+# print(os.environ.get('PASSWORD'))
+# print(os.environ.get('HOST'))
+# print(os.environ.get('PORT'))
 
 # DATABASES = {
 #     "default": {
 #         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "kriolstockdb",
-#         "USER": "root",
-#         "PASSWORD": "terrasystem1",
-#         "HOST": "172.18.0.2",
-#         "PORT": "5431",
+#         "NAME": os.environ.get('NAME'),
+#         "USER": os.environ.get('USER'),
+#         "DB_PASSWORD": os.environ.get('PASSWORD'),
+#         "HOST": os.environ.get('HOST'),
+#         "PORT": os.environ.get('PORT'),
 #     }
 # }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": 'kriolstockdb',
+        "USER": 'root',
+        "PASSWORD": 'terrasystem1',
+        "HOST": '172.18.0.3',
+        "PORT": '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
