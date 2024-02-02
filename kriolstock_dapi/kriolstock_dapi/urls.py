@@ -16,15 +16,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view as swagger_get_schema_view
 
 # from rest_framework_simplejwt.views import (
 #     TokenObtainPairView,
 #     TokenRefreshView,
 # )
+schema_view = swagger_get_schema_view(
+    openapi.Info(
+        title="KriolStock API",
+        default_version='1.0.0',
+        description="API documentation of users"
+    ),
+    public=True,
+)
+
 
 urlpatterns = [
-    path('api/', include('users.urls')),
-    path('api/', include('assets.urls')),
+    path('api/v1/', include('users.urls')),
+    path('api/v1/', include('assets.urls')),
+    path('swagger/schema/', schema_view.with_ui('swagger', cache_timeout=0), name="swagger-schema"),
     # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('admin/', admin.site.urls),

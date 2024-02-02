@@ -7,3 +7,5 @@ markdown
 django-filter
 python-dotenv
 djangorestframework-simplejwt
+pyyaml
+drf_yasg
